@@ -52,7 +52,7 @@ func FlagErrorFunc(cmd *cobra.Command, err error) error {
 
 var helpCommand = &cobra.Command{
 	Use:               "help [command]",
-	Short:             "Help about the command",
+	Short:             "Help about the command/关于命令的帮助",
 	PersistentPreRun:  func(cmd *cobra.Command, args []string) {},
 	PersistentPostRun: func(cmd *cobra.Command, args []string) {},
 	RunE: func(c *cobra.Command, args []string) error {
@@ -103,6 +103,7 @@ func managementSubCommands(cmd *cobra.Command) []*cobra.Command {
 	return cmds
 }
 
+// 用法说明模板
 var usageTemplate = `Usage:
 
 {{- if not .HasSubCommands}}	{{.UseLine}}{{end}}
@@ -152,5 +153,6 @@ Run '{{.CommandPath}} COMMAND --help' for more information on a command.
 {{- end}}
 `
 
+// 帮助手册模板
 var helpTemplate = `
 {{if or .Runnable .HasSubCommands}}{{.UsageString}}{{end}}`
