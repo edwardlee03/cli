@@ -2,6 +2,9 @@ Lists all the plugins that are currently installed. You can install plugins
 using the `docker plugin install` command.
 You can also filter using the `-f` or `--filter` flag.
 
+列出当前安装的所有插件。
+您可以使用`docker plugin install`命令安装插件。
+
 ## Filters
 
 Filter output based on these conditions:
@@ -17,8 +20,8 @@ Filter output based on these conditions:
       .Description - Plugin description.
       .Enabled - Whether plugin is enabled or not.
 
-# EXAMPLES
-## Display all plugins
+# EXAMPLES/示例
+## Display all plugins/显示所有插件
 
     $ docker plugin ls
     ID                  NAME                                    DESCRIPTION                         ENABLED
