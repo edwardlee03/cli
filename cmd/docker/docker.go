@@ -22,7 +22,7 @@ import (
 	"github.com/spf13/pflag"
 )
 
-// 返回新的命令行客户端的实例(初始化DockerCli)
+// 返回新的命令行客户端的实例
 func newDockerCommand(dockerCli *command.DockerCli) *cobra.Command {
 	opts := cliflags.NewClientOptions()
 	var flags *pflag.FlagSet
@@ -168,7 +168,7 @@ func noArgs(cmd *cobra.Command, args []string) error {
 }
 
 /**
- * Docker启动入口
+ * Docker 启动入口
  */
 func main() {
 	// Set terminal emulation based on platform as required.
