@@ -136,7 +136,7 @@ func hide(cmd *cobra.Command) *cobra.Command {
 	// If the environment variable with name "DOCKER_HIDE_LEGACY_COMMANDS" is not empty,
 	// these legacy commands (such as `docker ps`, `docker exec`, etc)
 	// will not be shown in output console.
-	// 这些遗留命令不会显示在输出控制台中
+	// 遗留命令不会显示在输出控制台中
 	if os.Getenv("DOCKER_HIDE_LEGACY_COMMANDS") == "" {
 		return cmd
 	}
