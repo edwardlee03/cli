@@ -61,15 +61,22 @@ type Cli interface {
 
 // DockerCli is an instance the docker command line client.
 // Instances of the client can be returned from NewDockerCli.
+// DockerCli 是 docker 命令行客户端的实例
 type DockerCli struct {
+	// 配置文件
 	configFile            *configfile.ConfigFile
+	// I/O流
 	in                    *InStream
 	out                   *OutStream
 	err                   io.Writer
+	// API 客户端
 	client                client.APIClient
+	// 服务器信息
 	serverInfo            ServerInfo
+	// 客户端信息
 	clientInfo            ClientInfo
 	contentTrust          bool
+	// 容器化的引擎客户端
 	newContainerizeClient func(string) (clitypes.ContainerizedClient, error)
 }
 
@@ -235,12 +242,13 @@ func (cli *DockerCli) NotaryClient(imgRefAndAuth trust.ImageRefAndAuth, actions 
 }
 
 // NewContainerizedEngineClient returns a containerized engine client
+// NewContainerizedEngineClient 返回容器化的引擎客户端
 func (cli *DockerCli) NewContainerizedEngineClient(sockPath string) (clitypes.ContainerizedClient, error) {
 	return cli.newContainerizeClient(sockPath)
 }
 
-// ServerInfo stores details about the supported features and platform of the
-// server
+// ServerInfo stores details about the supported features and platform of the server
+// ServerInfo 存储有关服务器支持的功能和平台的详细信息
 type ServerInfo struct {
 	HasExperimental bool
 	OSType          string
@@ -248,12 +256,14 @@ type ServerInfo struct {
 }
 
 // ClientInfo stores details about the supported features of the client
+// ClientInfo 存储有关客户端支持的功能的详细信息
 type ClientInfo struct {
 	HasExperimental bool
 	DefaultVersion  string
 }
 
 // NewDockerCli returns a DockerCli instance with IO output and error streams set by in, out and err.
+// NewDockerCli 返回 docker 命令行客户端的实例
 func NewDockerCli(in io.ReadCloser, out, err io.Writer, isTrusted bool, containerizedFn func(string) (clitypes.ContainerizedClient, error)) *DockerCli {
 	return &DockerCli{in: NewInStream(in), out: NewOutStream(out), err: err, contentTrust: isTrusted, newContainerizeClient: containerizedFn}
 }

@@ -22,13 +22,14 @@ import (
 	"github.com/spf13/pflag"
 )
 
+// 返回新的命令行客户端的实例(初始化DockerCli)
 func newDockerCommand(dockerCli *command.DockerCli) *cobra.Command {
 	opts := cliflags.NewClientOptions()
 	var flags *pflag.FlagSet
 
 	cmd := &cobra.Command{
 		Use:              "docker [OPTIONS] COMMAND [ARG...]",
-		Short:            "A self-sufficient runtime for containers",
+		Short:            "A self-sufficient runtime for containers/容器可自给的运行时环境",
 		SilenceUsage:     true,
 		SilenceErrors:    true,
 		TraverseChildren: true,
@@ -45,6 +46,7 @@ func newDockerCommand(dockerCli *command.DockerCli) *cobra.Command {
 		Version:               fmt.Sprintf("%s, build %s", cli.Version, cli.GitCommit),
 		DisableFlagsInUseLine: true,
 	}
+	// 为根命令设置默认用法，帮助和错误处理
 	cli.SetupRootCommand(cmd)
 
 	flags = cmd.Flags()
@@ -57,6 +59,7 @@ func newDockerCommand(dockerCli *command.DockerCli) *cobra.Command {
 	setHelpFunc(dockerCli, cmd, flags, opts)
 
 	cmd.SetOutput(dockerCli.Out())
+	// 将 cli/command 包中的所有命令添加到根命令
 	commands.AddCommands(cmd, dockerCli)
 
 	disableFlagsInUseLine(cmd)
@@ -164,12 +167,18 @@ func noArgs(cmd *cobra.Command, args []string) error {
 		"docker: '%s' is not a docker command.\nSee 'docker --help'", args[0])
 }
 
+/**
+ * Docker启动入口
+ */
 func main() {
 	// Set terminal emulation based on platform as required.
+	// 根据需要设置基于平台的终端仿真
 	stdin, stdout, stderr := term.StdStreams()
 	logrus.SetOutput(stderr)
 
+	// 新的 docker 命令行客户端的实例
 	dockerCli := command.NewDockerCli(stdin, stdout, stderr, contentTrustEnabled(), containerizedengine.NewClient)
+	// 新的命令行客户端的实例
 	cmd := newDockerCommand(dockerCli)
 
 	if err := cmd.Execute(); err != nil {
