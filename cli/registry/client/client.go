@@ -18,8 +18,8 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-// RegistryClient is a client used to communicate with a Docker distribution
-// registry
+// RegistryClient is a client used to communicate with a Docker distribution registry
+// RegistryClient 是用于与 Docker 分发注册中心通信的客户端
 type RegistryClient interface {
 	GetManifest(ctx context.Context, ref reference.Named) (manifesttypes.ImageManifest, error)
 	GetManifestList(ctx context.Context, ref reference.Named) ([]manifesttypes.ImageManifest, error)

@@ -9,12 +9,16 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// SetupRootCommand sets default usage, help, and error handling for the
-// root command.
+// SetupRootCommand sets default usage, help, and error handling for the root command.
+// SetupRootCommand 为根命令设置默认用法，帮助和错误处理
 func SetupRootCommand(rootCmd *cobra.Command) {
+	// 包含子命令
 	cobra.AddTemplateFunc("hasSubCommands", hasSubCommands)
+	// 包含管理子命令
 	cobra.AddTemplateFunc("hasManagementSubCommands", hasManagementSubCommands)
+	// 操作子命令
 	cobra.AddTemplateFunc("operationSubCommands", operationSubCommands)
+	// 管理子命令
 	cobra.AddTemplateFunc("managementSubCommands", managementSubCommands)
 	cobra.AddTemplateFunc("wrappedFlagUsages", wrappedFlagUsages)
 

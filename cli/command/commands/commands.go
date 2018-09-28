@@ -27,7 +27,7 @@ import (
 )
 
 // AddCommands adds all the commands from cli/command to the root command
-// 将 cli/command 包中的所有命令添加到根命令
+// AddCommands 将 cli/command 包中的所有命令添加到根命令
 func AddCommands(cmd *cobra.Command, dockerCli command.Cli) {
 	cmd.AddCommand(
 		// checkpoint/容器的检查点
@@ -59,7 +59,7 @@ func AddCommands(cmd *cobra.Command, dockerCli command.Cli) {
 		// plugin/插件
 		plugin.NewPluginCommand(dockerCli),
 
-		// registry/Docker注册中心
+		// registry/Docker分发注册中心
 		registry.NewLoginCommand(dockerCli),
 		registry.NewLogoutCommand(dockerCli),
 		registry.NewSearchCommand(dockerCli),
