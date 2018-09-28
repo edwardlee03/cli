@@ -34,6 +34,7 @@ import (
 )
 
 // Streams is an interface which exposes the standard input and output streams
+// Streams 是一个暴露标准输入和输出流的接口
 type Streams interface {
 	In() *InStream
 	Out() *OutStream
@@ -65,15 +66,15 @@ type Cli interface {
 type DockerCli struct {
 	// 配置文件
 	configFile            *configfile.ConfigFile
-	// I/O流
+	// 标准I/O流
 	in                    *InStream
 	out                   *OutStream
 	err                   io.Writer
 	// API 客户端
 	client                client.APIClient
-	// 服务器信息
+	// 服务器支持的功能和平台的详细信息
 	serverInfo            ServerInfo
-	// 客户端信息
+	// 客户端支持的功能的详细信息
 	clientInfo            ClientInfo
 	contentTrust          bool
 	// 容器化的引擎客户端
@@ -124,13 +125,14 @@ func (cli *DockerCli) ConfigFile() *configfile.ConfigFile {
 	return cli.configFile
 }
 
-// ServerInfo returns the server version details for the host this client is
-// connected to
+// ServerInfo returns the server version details for the host this client is connected to
+// ServerInfo 返回此客户端连接到的主机的服务器版本详细信息
 func (cli *DockerCli) ServerInfo() ServerInfo {
 	return cli.serverInfo
 }
 
 // ClientInfo returns the client details for the cli
+// ClientInfo 返回 cli 的客户端详细信息
 func (cli *DockerCli) ClientInfo() ClientInfo {
 	return cli.clientInfo
 }
@@ -147,8 +149,8 @@ func (cli *DockerCli) ManifestStore() manifeststore.Store {
 	return manifeststore.NewStore(filepath.Join(config.Dir(), "manifests"))
 }
 
-// RegistryClient returns a client for communicating with a Docker distribution
-// registry
+// RegistryClient returns a client for communicating with a Docker distribution registry
+// RegistryClient 返回一个用于与 Docker 分发注册中心通信的客户端
 func (cli *DockerCli) RegistryClient(allowInsecure bool) registryclient.RegistryClient {
 	resolver := func(ctx context.Context, index *registrytypes.IndexInfo) types.AuthConfig {
 		return ResolveAuthConfig(ctx, cli, index)
