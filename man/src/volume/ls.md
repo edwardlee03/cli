@@ -7,6 +7,8 @@ more than one filter,  pass multiple flags (for example,
 列出Docker管理的所有磁盘存储卷。
 
     $ docker volume ls
+    DRIVER              VOLUME NAME
+    local               docker
 
 The currently supported filters are:
 

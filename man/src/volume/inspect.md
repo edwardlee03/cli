@@ -6,4 +6,15 @@ package describes all the details of the format.
 
 返回若干个磁盘存储卷的信息。
 
-    $ docker volume inspect hello
+    $ docker volume inspect docker
+    [
+        {
+            "CreatedAt": "2018-09-28T17:53:53Z",
+            "Driver": "local",
+            "Labels": {},
+            "Mountpoint": "/var/lib/docker/volumes/docker/_data",
+            "Name": "docker",
+            "Options": {},
+            "Scope": "local"
+        }
+    ]

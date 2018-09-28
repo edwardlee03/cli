@@ -1,19 +1,23 @@
+
 Get event information from the Docker daemon. Information can include historical
 information and real-time information.
 
+从Docker守护进程获取事件信息。信息可包括历史信息和实时信息。
+
 Docker containers will report the following events:
+Docker容器将报告以下事件：
 
     attach, commit, copy, create, destroy, detach, die, exec_create, exec_detach, exec_start, export, kill, oom, pause, rename, resize, restart, start, stop, top, unpause, update
 
-Docker images report the following events:
+Docker images/Docker镜像 report the following events:
 
     delete, import, load, pull, push, save, tag, untag
 
-Docker volumes report the following events:
+Docker volumes/Docker磁盘存储卷 report the following events:
 
     create, mount, unmount, destroy
 
-Docker networks report the following events:
+Docker networks/Docker网络 report the following events:
 
     create, connect, disconnect, destroy
 
@@ -32,12 +36,15 @@ that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap
 seconds (aka Unix epoch or Unix time), and the optional .nanoseconds field is a
 fraction of a second no more than nine digits long.
 
-# EXAMPLES
+# EXAMPLES/示例
 
-## Listening for Docker events
+## Listening for Docker events/侦听Docker事件
 
 After running docker events a container 786d698004576 is started and stopped
 (The container name has been shortened in the output below):
+
+    # docker system events
+    2018-09-29T01:53:53.591728487+08:00 volume create docker (driver=local)
 
     # docker events
     2015-01-28T20:21:31.000000000-08:00 59211849bc10: (from whenry/testimage:latest) start
@@ -94,7 +101,7 @@ Lines. For information about JSON Lines, please refer to http://jsonlines.org/ .
     {"status":"start","id":"196016a57679bf42424484918746a9474cd905dd993c4d0f42..
     {"status":"resize","id":"196016a57679bf42424484918746a9474cd905dd993c4d0f4..
 
-## Filters
+## Filters/过滤条件
 
     $ docker events --filter 'event=stop'
     2014-05-10T17:42:14.999999999Z07:00 container stop 4386fb97867d (image=ubuntu-1:14.04)
