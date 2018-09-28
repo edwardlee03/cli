@@ -70,7 +70,7 @@ type DockerCli struct {
 	in                    *InStream
 	out                   *OutStream
 	err                   io.Writer
-	// API 客户端
+	// API客户端
 	client                client.APIClient
 	// 服务器支持的功能和平台的详细信息
 	serverInfo            ServerInfo
