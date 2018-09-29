@@ -1,10 +1,14 @@
-Removes one or more networks by name or identifier. To remove a network,
+
+**Removes one or more networks by name or identifier.** To remove a network,
 you must first disconnect any containers connected to it.
 To remove the network named 'my-network':
 
 ```bash
   $ docker network rm my-network
 ```
+
+**按名称或标识符删除一个或多个网络。**
+要删除网络，必须先断开连接到它的任何容器。(没人使用了方可删除)
 
 To delete multiple networks in a single `docker network rm` command, provide
 multiple network names or ids. The following example deletes a network with id
