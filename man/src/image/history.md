@@ -1,4 +1,7 @@
+
 Show the history of when and how an image was created.
+
+显示镜像创建的时间和方式的历史记录。
 
 # EXAMPLES
     $ docker history fedora
@@ -8,7 +11,8 @@ Show the history of when and how an image was created.
     511136ea3c5a   10 months ago                                                    0 B                 Imported from -
 
 ## Display comments in the image history
-The `docker commit` command has a **-m** flag for adding comments to the image. These comments will be displayed in the image history.
+The `docker commit` command has a **-m** flag for adding comments to the image.
+These comments will be displayed in the image history.
 
     $ sudo docker history docker:scm
     IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
