@@ -1,5 +1,5 @@
 
-Lists all the volumes Docker manages. You can filter using the `-f` or
+**Lists all the volumes Docker manages.** You can filter using the `-f` or
 `--filter` flag. The filtering format is a `key=value` pair. To specify
 more than one filter,  pass multiple flags (for example,
 `--filter "foo=bar" --filter "bif=baz"`)

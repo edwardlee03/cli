@@ -1,4 +1,5 @@
-Creates a new network. The `DRIVER` accepts `bridge` or `overlay` which are the
+
+**Creates a new network.** The `DRIVER` accepts `bridge` or `overlay` which are the
 built-in network drivers. If you have installed a third party or your own custom
 network driver you can specify that `DRIVER` here also. If you don't specify the
 `--driver` option, the command automatically creates a `bridge` network for you.
@@ -8,19 +9,26 @@ on. When you launch a new container with  `docker run` it automatically connects
 this bridge network. You cannot remove this default bridge network but you can
 create new ones using the `network create` command.
 
+**创建一个新的网络。**
+当您安装Docker引擎时，它会自动地创建一个`bridge`网络。
+该网络对应于Engine传统上依赖的`docker0`桥接。
+使用`docker run`启动新容器时，它会自动连接到此桥接网络。
+
 ```bash
 $ docker network create -d bridge my-bridge-network
 ```
 
-Bridge networks are isolated networks on a single Engine installation. If you
+**Bridge networks are isolated networks** on a single Engine installation. If you
 want to create a network that spans multiple Docker hosts each running an
 Engine, you must create an `overlay` network. Unlike `bridge` networks overlay
 networks require some pre-existing conditions before you can create one. These
 conditions are:
 
-* Access to a key-value store. Engine supports Consul, Etcd, and Zookeeper (Distributed store) key-value stores.
-* A cluster of hosts with connectivity to the key-value store.
+* Access to `a key-value store`. Engine supports Consul, Etcd, and Zookeeper (Distributed store) key-value stores.
+* `A cluster of hosts` with connectivity to the key-value store.
 * A properly configured Engine `daemon` on each host in the cluster.
+
+**桥接网络**在单个Engine安装上**是隔离的网络。**
 
 The `dockerd` options that support the `overlay` network are:
 
@@ -43,11 +51,11 @@ Docker host in the cluster and issue the following to create the network:
 $ docker network create -d overlay my-multihost-network
 ```
 
-Network names must be unique. The Docker daemon attempts to identify naming
+`Network names must be unique.` The Docker daemon attempts to identify naming
 conflicts but this is not guaranteed. It is the user's responsibility to avoid
 name conflicts.
 
-## Connect containers
+## Connect containers/连接容器
 
 When you start a container use the `--network` flag to connect it to a network.
 This adds the `busybox` container to the `mynet` network.
@@ -118,7 +126,7 @@ connects a bridge network to it to provide external connectivity. If you want
 to create an externally isolated `overlay` network, you can specify the
 `--internal` option.
 
-### Network ingress mode
+### Network ingress mode/网络入口模式
 
 You can create the network which will be used to provide the routing-mesh in the
 swarm cluster. You do so by specifying `--ingress` when creating the network. Only
@@ -135,7 +143,7 @@ $ docker network create -d overlay \
   my-ingress-network
 ```
 
-### Run services on predefined networks
+### Run services on predefined networks/在预定义网络上运行服务
 
 You can create services on the predefined docker networks `bridge` and `host`.
 
@@ -171,7 +179,4 @@ node1$ docker network create --config-only --subnet 192.168.100.0/24 --gateway 1
 node2$ docker network create --config-only --subnet 192.168.200.0/24 --gateway 192.168.200.202 mv-config
 node1$ docker network create -d macvlan --scope swarm --config-from mv-config --attachable swarm-network
 ```
-
-
-
 

@@ -1,8 +1,9 @@
-Lists all the plugins that are currently installed. You can install plugins
+
+**Lists all the plugins that are currently installed.** You can install plugins
 using the `docker plugin install` command.
 You can also filter using the `-f` or `--filter` flag.
 
-列出当前安装的所有插件。
+**列出当前安装的所有插件。**
 您可以使用`docker plugin install`命令安装插件。
 
 ## Filters

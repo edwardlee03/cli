@@ -1,10 +1,11 @@
 
-This command displays system wide information regarding the Docker installation.
+This command **displays system wide information regarding the Docker installation.**
 Information displayed includes the kernel version, number of containers and images.
 The number of images shown is the number of unique images. The same image tagged
 under different names is counted only once.
 
-显示有关Docker安装的系统范围信息。显示的信息包括内核版本，容器和镜像的数量。
+**显示有关Docker安装的系统范围信息。**
+显示的信息包括内核版本，容器和镜像的数量。
 显示的镜像数量是唯一镜像的数量，标记在不同名称下的相同镜像仅计算一次。
 
 If a format is specified, the given template will be executed instead of the
@@ -23,7 +24,7 @@ meta data regarding those images are stored. When run for the first time Docker
 allocates a certain amount of data space and meta data space from the space
 available on the volume where `/var/lib/docker` is mounted.
 
-**数据文件**是`存储镜像的位置`，**元数据文件**是`存储`关于这些`镜像的元数据的位置`。
+**数据文件**是**存储`镜像`的位置**，**元数据文件**是**存储**关于这些**`镜像的元数据`的位置**。
 
 # EXAMPLES/示例
 

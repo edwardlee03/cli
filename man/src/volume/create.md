@@ -1,5 +1,5 @@
 
-Creates a new volume that containers can consume and store data in. If a name
+**Creates a new volume that containers can consume and store data in.** If a name
 is not specified, Docker generates a random name. You create a volume and then
 configure the container to use it, for example:
 
@@ -7,7 +7,7 @@ configure the container to use it, for example:
     hello
     $ docker run -d -v hello:/world busybox ls /world
 
-创建容器可以使用和存储数据的新卷。
+**创建容器可以使用和存储数据的新卷。**
 
 The mount is created inside the container's `/src` directory. Docker doesn't
 not support relative paths for mount points inside the container.
@@ -18,7 +18,7 @@ Multiple containers can use the same volume in the same time period. This is
 useful if two containers need access to shared data. For example, if one
 container writes and the other reads the data.
 
-多个容器可以在同一时间段内使用相同的磁盘存储卷。
+**多个容器可以在同一时间段内使用相同的磁盘存储卷。**
 如果两个容器需要访问共享数据，这将非常有用。(日志文件)
 
 ## Driver specific options

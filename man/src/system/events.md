@@ -1,8 +1,8 @@
 
-Get event information from the Docker daemon. Information can include historical
+**Get event information from the Docker daemon.** Information can include historical
 information and real-time information.
 
-从Docker守护进程获取事件信息。信息可包括历史信息和实时信息。
+**从Docker守护进程获取事件信息。**信息可包括历史信息和实时信息。
 
 Docker containers will report the following events:
 Docker容器将报告以下事件：
