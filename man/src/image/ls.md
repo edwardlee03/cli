@@ -1,4 +1,7 @@
-This command lists the images stored in the local Docker repository.
+
+This command **lists the images stored in the local Docker repository.**
+
+**列出存储在本地Docker仓库中的镜像。**
 
 By default, intermediate images, used during builds, are not listed. Some of the
 output, e.g., image ID, is truncated, for space reasons. However the truncated
