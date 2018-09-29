@@ -1,4 +1,5 @@
-Lists all the networks the Engine `daemon` knows about. This includes the
+
+**Lists all the networks the Engine `daemon` knows about.** This includes the
 networks that span across multiple hosts in a cluster, for example:
 
 ```bash
@@ -9,6 +10,8 @@ networks that span across multiple hosts in a cluster, for example:
     cf03ee007fb4        host                host            local
     78b03ee04fc4        multi-host          overlay         swarm
 ```
+
+**列出Engine守护进程知道的所有网络。**
 
 Use the `--no-trunc` option to display the full network id:
 
