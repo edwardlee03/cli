@@ -1,4 +1,7 @@
-Returns information about one or more networks. By default, this command renders all results in a JSON object. For example, if you connect two containers to the default `bridge` network:
+
+**Returns information about one or more networks.**
+By default, this command renders all results in a JSON object.
+For example, if you connect two containers to the default `bridge` network:
 
 ```bash
 $ sudo docker run -itd --name=container1 busybox
@@ -7,6 +10,8 @@ f2870c98fd504370fb86e59f32cd0753b1ac9b69b7d80566ffc7192a82b3ed27
 $ sudo docker run -itd --name=container2 busybox
 bda12f8922785d1f160be70736f26c1e331ab8aaf8ed8d56728508f2e2fd4727
 ```
+
+**返回一个或多个网络的信息。**
 
 The `network inspect` command shows the containers, by id, in its
 results. You can specify an alternate format to execute a given
@@ -26,18 +31,24 @@ $ sudo docker network inspect bridge
             "Driver": "default",
             "Config": [
                 {
+                    // 子网
                     "Subnet": "172.17.42.1/16",
+                    // 网关
                     "Gateway": "172.17.42.1"
                 }
             ]
         },
         "Internal": false,
         "Ingress": false,
+        // 容器列表
         "Containers": {
             "bda12f8922785d1f160be70736f26c1e331ab8aaf8ed8d56728508f2e2fd4727": {
                 "Name": "container2",
+                // 端点标识
                 "EndpointID": "0aebb8fcd2b282abe1365979536f21ee4ceaf3ed56177c628eae9f706e00e019",
+                // MAC地址
                 "MacAddress": "02:42:ac:11:00:02",
+                // IP地址
                 "IPv4Address": "172.17.0.2/16",
                 "IPv6Address": ""
             },
