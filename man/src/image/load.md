@@ -1,6 +1,10 @@
-Loads a tarred repository from a file or the standard input stream.
+
+**Loads a tarred repository** from a file or the standard input stream.
 Restores both images and tags. Write image names or IDs imported it
 standard output stream.
+
+**从文件或标准输入流加载镜像存档仓库。**
+恢复镜像和标签。写入镜像名称或ID导入标准输出流。
 
 # EXAMPLES
 
