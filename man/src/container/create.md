@@ -1,14 +1,17 @@
-Creates a writeable container layer over the specified image and prepares it for
-running the specified command. The container ID is then printed to STDOUT. This
+
+**Creates a writeable container layer over the specified image and prepares it for
+running the specified command.** The container ID is then printed to STDOUT. This
 is similar to **docker run -d** except the container is never started. You can 
 then use the **docker start <container_id>** command to start the container at
 any point.
+
+在指定的镜像上创建可写的容器图层，并为其做好准备运行指定的命令。
 
 The initial status of the container created with **docker create** is 'created'.
 
 ### OPTIONS 
 
-The `CONTAINER-DIR` must be an absolute path such as `/src/docs`. The `HOST-DIR`
+**The `CONTAINER-DIR` must be an absolute path** such as `/src/docs`. The `HOST-DIR`
 can be an absolute path or a `name` value. A `name` value must start with an
 alphanumeric character, followed by `a-z0-9`, `_` (underscore), `.` (period) or
 `-` (hyphen). An absolute path starts with a `/` (forward slash).
