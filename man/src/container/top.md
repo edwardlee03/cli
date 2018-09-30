@@ -1,4 +1,8 @@
-Display the running process of the container. ps-OPTION can be any of the options you would pass to a Linux ps command.
+
+**Display the running process of the container.**
+ps-OPTION can be any of the options you would pass to a Linux ps command.
+
+**显示容器中运行的进程。**
 
 All displayed information is from host's point of view.
 
