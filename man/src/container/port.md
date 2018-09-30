@@ -1,4 +1,8 @@
-List port mappings for the CONTAINER, or lookup the public-facing port that is NAT-ed to the PRIVATE_PORT
+
+**List port mappings for the CONTAINER, or lookup the public-facing port
+that is NAT-ed to the PRIVATE_PORT.**
+
+**列出容器的端口映射，或查找NAT-ed到PRIVATE_PORT的面向公众的端口。**
 
 # EXAMPLES
 
