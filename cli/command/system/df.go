@@ -20,7 +20,7 @@ func newDiskUsageCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "df [OPTIONS]",
-		Short: "Show docker disk usage",
+		Short: "Show docker disk usage/显示docker的磁盘使用情况",
 		Args:  cli.NoArgs,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			return runDiskUsage(dockerCli, opts)

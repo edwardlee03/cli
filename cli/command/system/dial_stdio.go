@@ -16,7 +16,7 @@ import (
 func newDialStdioCommand(dockerCli command.Cli) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:    "dial-stdio",
-		Short:  "Proxy the stdio stream to the daemon connection. Should not be invoked manually.",
+		Short:  "Proxy the stdio stream to the daemon connection. Should not be invoked manually./将标准I/O流代理到守护进程连接。不应手动调用。",
 		Args:   cli.NoArgs,
 		Hidden: true,
 		RunE: func(cmd *cobra.Command, args []string) error {

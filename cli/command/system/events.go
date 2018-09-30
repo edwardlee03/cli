@@ -32,7 +32,7 @@ func NewEventsCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "events [OPTIONS]",
-		Short: "Get real time events from the server",
+		Short: "Get real time events from the server/从服务器获取实时事件",
 		Args:  cli.NoArgs,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			return runEvents(dockerCli, &options)

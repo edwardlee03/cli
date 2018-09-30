@@ -27,7 +27,7 @@ func NewInfoCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "info [OPTIONS]",
-		Short: "Display system-wide information",
+		Short: "Display system-wide information/显示系统范围的信息",
 		Args:  cli.NoArgs,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			return runInfo(dockerCli, &opts)
