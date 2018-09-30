@@ -27,7 +27,7 @@ func newCreateCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "create [OPTIONS] [VOLUME]",
-		Short: "Create a volume",
+		Short: "Create a volume/创建一个数据卷",
 		Args:  cli.RequiresMaxArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 1 {

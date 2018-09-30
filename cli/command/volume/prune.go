@@ -22,7 +22,7 @@ func NewPruneCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "prune [OPTIONS]",
-		Short: "Remove all unused local volumes",
+		Short: "Remove all unused local volumes/删除所有未使用的本地数据卷",
 		Args:  cli.NoArgs,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			spaceReclaimed, output, err := runPrune(dockerCli, options)
