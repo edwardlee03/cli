@@ -1,10 +1,17 @@
-Run a process in a running container.
 
-The command started using `docker exec` will only run while the container's primary
-process (`PID 1`) is running, and will not be restarted if the container is restarted.
+**Run a process in a running container.**
 
-If the container is paused, then the `docker exec` command will wait until the
-container is unpaused, and then run
+**在正在运行的容器中运行进程。**
+
+The command started using `docker exec` will **only run while the container's primary
+process (`PID 1`) is running**, and will `not be restarted if the container is restarted`.
+
+使用`docker exec`只会在容器的主进程(`PID 1`)运行时运行，如果容器重新启动则不会重新启动。
+
+If the container is `paused`, then the `docker exec` command will `wait` until the
+container is unpaused, and then run.
+
+如果容器暂停，那么`docker exec`命令将一直等到容器取消暂停，然后运行。
 
 # CAPABILITIES
 
