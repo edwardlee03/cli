@@ -1,10 +1,13 @@
-The **docker attach** command allows you to attach to a running container using
-the container's ID or name, either to view its ongoing output or to control it
+
+The **docker attach** command allows you to **attach to a running container using
+the container's ID or name**, either to view its ongoing output or to control it
 interactively.  You can attach to the same contained process multiple times
 simultaneously, screen sharing style, or quickly view the progress of your
 detached process.
 
-To stop a container, use `CTRL-c`. This key sequence sends `SIGKILL` to the
+**使用容器的ID或名称附加到正在运行的容器。**
+
+To `stop a container`, use `CTRL-c`. This key sequence sends `SIGKILL` to the
 container. You can detach from the container (and leave it running) using a
 configurable key sequence. The default sequence is `CTRL-p CTRL-q`. You
 configure the key sequence using the **--detach-keys** option or a configuration
