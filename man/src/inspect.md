@@ -5,7 +5,7 @@ this will render all results in a JSON array. If the container and image have
 the same name, this will return container JSON for unspecified type. If a format
 is specified, the given template will be executed for each result.
 
-这将**显示Docker对象的相关底层信息(容器，镜像，存储卷，网络，节点，服务，任务)。**
+这将**显示Docker对象的相关底层信息(容器，镜像，数据卷，网络，节点，服务，任务)。**
 
 # EXAMPLES
 

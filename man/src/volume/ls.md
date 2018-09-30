@@ -4,7 +4,7 @@
 more than one filter,  pass multiple flags (for example,
 `--filter "foo=bar" --filter "bif=baz"`)
 
-列出Docker管理的所有磁盘存储卷。
+列出Docker管理的所有数据卷。
 
     $ docker volume ls
     DRIVER              VOLUME NAME

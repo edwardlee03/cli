@@ -138,7 +138,7 @@ Mac:
       Cgroup Driver: cgroupfs
       // 插件列表
       Plugins:
-       // 磁盘存储卷
+       // 数据卷
        Volume: local
        // 网络
        Network: bridge host ipvlan macvlan null overlay

@@ -18,7 +18,7 @@ Multiple containers can use the same volume in the same time period. This is
 useful if two containers need access to shared data. For example, if one
 container writes and the other reads the data.
 
-**多个容器可以在同一时间段内使用相同的磁盘存储卷。**
+**多个容器可以在同一时间段内使用相同的数据卷。**
 如果两个容器需要访问共享数据，这将非常有用。(日志文件)
 
 ## Driver specific options

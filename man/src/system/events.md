@@ -13,7 +13,7 @@ Docker images/Docker镜像 report the following events:
 
     delete, import, load, pull, push, save, tag, untag
 
-Docker volumes/Docker磁盘存储卷 report the following events:
+Docker volumes/Docker数据卷 report the following events:
 
     create, mount, unmount, destroy
 
