@@ -20,7 +20,7 @@ func NewDiffCommand(dockerCli command.Cli) *cobra.Command {
 
 	return &cobra.Command{
 		Use:   "diff CONTAINER",
-		Short: "Inspect changes to files or directories on a container's filesystem",
+		Short: "Inspect changes to files or directories on a container's filesystem/检查容器文件系统上的文件或目录的更改",
 		Args:  cli.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.container = args[0]

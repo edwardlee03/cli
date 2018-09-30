@@ -21,7 +21,7 @@ func NewExportCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "export [OPTIONS] CONTAINER",
-		Short: "Export a container's filesystem as a tar archive",
+		Short: "Export a container's filesystem as a tar archive/将容器的文件系统导出为tar存档",
 		Args:  cli.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.container = args[0]

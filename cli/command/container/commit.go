@@ -27,7 +27,7 @@ func NewCommitCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]",
-		Short: "Create a new image from a container's changes",
+		Short: "Create a new image from a container's changes/根据容器的更改创建新的镜像",
 		Args:  cli.RequiresRangeArgs(1, 2),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			options.container = args[0]

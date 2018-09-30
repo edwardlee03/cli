@@ -28,7 +28,7 @@ func NewLogsCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "logs [OPTIONS] CONTAINER",
-		Short: "Fetch the logs of a container",
+		Short: "Fetch the logs of a container/获取容器的日志",
 		Args:  cli.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.container = args[0]

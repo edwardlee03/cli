@@ -49,7 +49,7 @@ func NewAttachCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "attach [OPTIONS] CONTAINER",
-		Short: "Attach local standard input, output, and error streams to a running container",
+		Short: "Attach local standard input, output, and error streams to a running container/将本地标准输入，输出和错误流附加到正在运行的容器",
 		Args:  cli.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.container = args[0]

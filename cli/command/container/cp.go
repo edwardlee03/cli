@@ -46,7 +46,7 @@ func NewCopyCommand(dockerCli command.Cli) *cobra.Command {
 	cmd := &cobra.Command{
 		Use: `cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|-
 	docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH`,
-		Short: "Copy files/folders between a container and the local filesystem",
+		Short: "Copy files/folders between a container and the local filesystem/在容器和本地文件系统之间复制文件/文件夹",
 		Long: strings.Join([]string{
 			"Copy files/folders between a container and the local filesystem\n",
 			"\nUse '-' as the source to read a tar archive from stdin\n",

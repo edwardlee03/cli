@@ -21,7 +21,7 @@ func NewPauseCommand(dockerCli command.Cli) *cobra.Command {
 
 	return &cobra.Command{
 		Use:   "pause CONTAINER [CONTAINER...]",
-		Short: "Pause all processes within one or more containers",
+		Short: "Pause all processes within one or more containers/暂停一个或多个容器中的所有进程",
 		Args:  cli.RequiresMinArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.containers = args

@@ -24,7 +24,7 @@ func NewPortCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "port CONTAINER [PRIVATE_PORT[/PROTO]]",
-		Short: "List port mappings or a specific mapping for the container",
+		Short: "List port mappings or a specific mapping for the container/列出端口映射或容器的特定映射",
 		Args:  cli.RequiresRangeArgs(1, 2),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.container = args[0]
