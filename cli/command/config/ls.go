@@ -25,7 +25,7 @@ func newConfigListCommand(dockerCli command.Cli) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:     "ls [OPTIONS]",
 		Aliases: []string{"list"},
-		Short:   "List configs",
+		Short:   "List configs/列出Docker配置",
 		Args:    cli.NoArgs,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			return runConfigList(dockerCli, listOpts)

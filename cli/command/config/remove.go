@@ -19,7 +19,7 @@ func newConfigRemoveCommand(dockerCli command.Cli) *cobra.Command {
 	return &cobra.Command{
 		Use:     "rm CONFIG [CONFIG...]",
 		Aliases: []string{"remove"},
-		Short:   "Remove one or more configs",
+		Short:   "Remove one or more configs/删除一个或多个Docker配置",
 		Args:    cli.RequiresMinArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts := removeOptions{
