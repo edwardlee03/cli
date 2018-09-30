@@ -18,7 +18,7 @@ func newCreateCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "create [OPTIONS] IMAGE [COMMAND] [ARG...]",
-		Short: "Create a new service",
+		Short: "Create a new service/创建一个新的服务",
 		Args:  cli.RequiresMinArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.image = args[0]

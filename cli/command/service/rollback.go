@@ -16,7 +16,7 @@ func newRollbackCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "rollback [OPTIONS] SERVICE",
-		Short: "Revert changes to a service's configuration",
+		Short: "Revert changes to a service's configuration/还原对服务配置的更改",
 		Args:  cli.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			return runRollback(dockerCli, options, args[0])

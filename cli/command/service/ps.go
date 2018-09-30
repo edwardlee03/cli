@@ -31,7 +31,7 @@ func newPsCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "ps [OPTIONS] SERVICE [SERVICE...]",
-		Short: "List the tasks of one or more services",
+		Short: "List the tasks of one or more services/列出一个或多个服务的任务",
 		Args:  cli.RequiresMinArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			options.services = args
