@@ -19,7 +19,7 @@ func newInspectCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "inspect [OPTIONS] PLUGIN [PLUGIN...]",
-		Short: "Display detailed information on one or more plugins",
+		Short: "Display detailed information on one or more plugins/显示一个或多个插件的详细信息",
 		Args:  cli.RequiresMinArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.pluginNames = args

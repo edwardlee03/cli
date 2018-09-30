@@ -22,7 +22,7 @@ func newPushCommand(dockerCli command.Cli) *cobra.Command {
 	var opts pushOptions
 	cmd := &cobra.Command{
 		Use:   "push [OPTIONS] PLUGIN[:TAG]",
-		Short: "Push a plugin to a registry",
+		Short: "Push a plugin to a registry/将插件推送到分发注册中心",
 		Args:  cli.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.name = args[0]

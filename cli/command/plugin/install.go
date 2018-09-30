@@ -36,7 +36,7 @@ func newInstallCommand(dockerCli command.Cli) *cobra.Command {
 	var options pluginOptions
 	cmd := &cobra.Command{
 		Use:   "install [OPTIONS] PLUGIN [KEY=VALUE...]",
-		Short: "Install a plugin",
+		Short: "Install a plugin/安装插件",
 		Args:  cli.RequiresMinArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			options.remote = args[0]

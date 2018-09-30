@@ -17,7 +17,7 @@ func newUpgradeCommand(dockerCli command.Cli) *cobra.Command {
 	var options pluginOptions
 	cmd := &cobra.Command{
 		Use:   "upgrade [OPTIONS] PLUGIN [REMOTE]",
-		Short: "Upgrade an existing plugin",
+		Short: "Upgrade an existing plugin/升级现有插件",
 		Args:  cli.RequiresRangeArgs(1, 2),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			options.localName = args[0]

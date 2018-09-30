@@ -21,7 +21,7 @@ func newRemoveCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:     "rm [OPTIONS] PLUGIN [PLUGIN...]",
-		Short:   "Remove one or more plugins",
+		Short:   "Remove one or more plugins/删除一个或多个插件",
 		Aliases: []string{"remove"},
 		Args:    cli.RequiresMinArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {

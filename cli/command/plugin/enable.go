@@ -21,7 +21,7 @@ func newEnableCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "enable [OPTIONS] PLUGIN",
-		Short: "Enable a plugin",
+		Short: "Enable a plugin/启用插件",
 		Args:  cli.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.name = args[0]
