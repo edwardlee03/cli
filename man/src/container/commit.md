@@ -1,12 +1,18 @@
-Create a new image from an existing container specified by name or
-container ID.  The new image will contain the contents of the
+
+**Create a new image from an existing container specified by name or
+container ID.**  The new image will contain the contents of the
 container filesystem, *excluding* any data volumes. Refer to **docker-tag(1)**
 for more information about valid image and tag names.
 
+**从指定名称或容器ID的现有容器创建新的镜像。**
+新镜像将包含容器文件系统的内容，但不包括任何数据卷。
+
 While the `docker commit` command is a convenient way of extending an
-existing image, you should prefer the use of a Dockerfile and `docker
-build` for generating images that you intend to share with other
+existing image, you should prefer **the use of a Dockerfile and `docker
+build` for generating images** that you intend to share with other
 people.
+
+你应该更喜欢使用Dockerfile和`docker build`来生成你打算与其他人共享的镜像。
 
 # EXAMPLES
 
@@ -21,7 +27,7 @@ create a new image run `docker ps` to find the container's ID and then run:
 Note that only a-z0-9-_. are allowed when naming images from an 
 existing container.
 
-## Apply specified Dockerfile instructions while committing the image
+## Apply specified Dockerfile instructions while committing the image/提交镜像时应用指定的Dockerfile指令
 If an existing container was created without the DEBUG environment
 variable set to "true", you can create a new image based on that
 container by first getting the container's ID with `docker ps` and
