@@ -22,7 +22,7 @@ func newCreateCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "create [OPTIONS] CONTAINER CHECKPOINT",
-		Short: "Create a checkpoint from a running container",
+		Short: "Create a checkpoint from a running container/从正在运行的容器创建检查点",
 		Args:  cli.ExactArgs(2),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.container = args[0]

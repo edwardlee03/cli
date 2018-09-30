@@ -19,7 +19,7 @@ func newRemoveCommand(dockerCli command.Cli) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:     "rm [OPTIONS] CONTAINER CHECKPOINT",
 		Aliases: []string{"remove"},
-		Short:   "Remove a checkpoint",
+		Short:   "Remove a checkpoint/删除检查点",
 		Args:    cli.ExactArgs(2),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			return runRemove(dockerCli, args[0], args[1], opts)

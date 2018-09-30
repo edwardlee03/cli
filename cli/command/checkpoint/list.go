@@ -20,7 +20,7 @@ func newListCommand(dockerCli command.Cli) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:     "ls [OPTIONS] CONTAINER",
 		Aliases: []string{"list"},
-		Short:   "List checkpoints for a container",
+		Short:   "List checkpoints for a container/列出容器的检查点",
 		Args:    cli.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			return runList(dockerCli, args[0], opts)
