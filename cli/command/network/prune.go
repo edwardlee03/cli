@@ -21,7 +21,7 @@ func NewPruneCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "prune [OPTIONS]",
-		Short: "Remove all unused networks",
+		Short: "Remove all unused networks/删除所有未使用的网络",
 		Args:  cli.NoArgs,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			output, err := runPrune(dockerCli, options)

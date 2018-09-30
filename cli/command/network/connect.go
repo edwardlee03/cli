@@ -27,7 +27,7 @@ func newConnectCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "connect [OPTIONS] NETWORK CONTAINER",
-		Short: "Connect a container to a network",
+		Short: "Connect a container to a network/将容器连接到网络",
 		Args:  cli.ExactArgs(2),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			options.network = args[0]

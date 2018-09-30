@@ -26,7 +26,7 @@ func newListCommand(dockerCli command.Cli) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:     "ls [OPTIONS]",
 		Aliases: []string{"list"},
-		Short:   "List networks",
+		Short:   "List networks/列出网络",
 		Args:    cli.NoArgs,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			return runList(dockerCli, options)

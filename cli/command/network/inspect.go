@@ -21,7 +21,7 @@ func newInspectCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "inspect [OPTIONS] NETWORK [NETWORK...]",
-		Short: "Display detailed information on one or more networks",
+		Short: "Display detailed information on one or more networks/显示一个或多个网络的详细信息",
 		Args:  cli.RequiresMinArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.names = args

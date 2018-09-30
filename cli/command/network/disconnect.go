@@ -19,7 +19,7 @@ func newDisconnectCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "disconnect [OPTIONS] NETWORK CONTAINER",
-		Short: "Disconnect a container from a network",
+		Short: "Disconnect a container from a network/断开容器与网络的连接",
 		Args:  cli.ExactArgs(2),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.network = args[0]

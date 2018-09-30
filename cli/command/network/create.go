@@ -46,7 +46,7 @@ func newCreateCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "create [OPTIONS] NETWORK",
-		Short: "Create a network",
+		Short: "Create a network/创建一个网络",
 		Args:  cli.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			options.name = args[0]
