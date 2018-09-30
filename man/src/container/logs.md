@@ -1,7 +1,10 @@
-The **docker container logs** command batch-retrieves whatever logs are present for
-a container at the time of execution. This does not guarantee execution
+
+The **docker container logs** command **batch-retrieves whatever logs are present for
+a container** at the time of execution. This does not guarantee execution
 order when combined with a docker run (i.e., your run may not have generated
 any logs at the time you execute docker container logs).
+
+批量检索容器中的任何日志。
 
 The **docker container logs --follow** command combines commands **docker container logs** and
 **docker attach**. It will first return all logs from the beginning and
