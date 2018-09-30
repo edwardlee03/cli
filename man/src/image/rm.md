@@ -1,6 +1,9 @@
-Removes one or more images from the host node. This does not remove images from
+
+**Removes one or more images from the host node.** This does not remove images from
 a registry. You cannot remove an image of a running container unless you use the
 **-f** option. To see all images on a host use the **docker image ls** command.
+
+**从主机节点删除一个或多个镜像。**
 
 # EXAMPLES
 
