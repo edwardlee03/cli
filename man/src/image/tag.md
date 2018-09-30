@@ -1,5 +1,8 @@
-Assigns a new alias to an image in a registry. An alias refers to the
-entire image name including the optional `TAG` after the ':'. 
+
+**Assigns a new alias to an image in a registry.** An alias refers to the
+entire image name including the optional `TAG` after the ':'.
+
+**为分发注册中心中的镜像分配新的别名。**
 
 # OPTIONS
 **NAME**
@@ -22,14 +25,14 @@ entire image name including the optional `TAG` after the ':'.
 
 # EXAMPLES
 
-## Tagging an image referenced by ID
+## Tagging an image referenced by ID/标记ID引用的镜像
 
 To tag a local image with ID "0e5574283393" into the "fedora" repository with 
 "version1.0":
 
     docker image tag 0e5574283393 fedora/httpd:version1.0
 
-## Tagging an image referenced by Name
+## Tagging an image referenced by Name/标记名称引用的镜像
 
 To tag a local image with name "httpd" into the "fedora" repository with 
 "version1.0":
@@ -46,7 +49,7 @@ repository with "version1.0.test":
 
     docker image tag httpd:test fedora/httpd:version1.0.test
 
-## Tagging an image for a private repository
+## Tagging an image for a private repository/标记私有镜像仓库的映像
 
 To push an image to a private registry and not the central Docker
 registry you must tag it with the registry hostname and port (if needed).

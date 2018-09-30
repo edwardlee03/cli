@@ -1,5 +1,6 @@
-Produces a tarred repository to the standard output stream. Contains all
-parent layers, and all tags + versions, or specified repo:tag.
+
+**Produces a tarred repository** to the standard output stream. Contains
+`all parent layers, and all tags + versions, or specified repo:tag`.
 
 Stream to a file instead of STDOUT by using **-o**.
 
