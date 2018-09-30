@@ -1,18 +1,21 @@
-This command pulls down an image or a repository from a registry. If
+
+This command **pulls down an image or a repository from a registry.** If
 there is more than one image for a repository (e.g., fedora) then all
 images for that repository name can be pulled down including any tags
 (see the option **-a** or **--all-tags**).
+
+**从Docker分发注册中心拉取镜像或镜像存档仓库(多个镜像/批量)。**
 
 If you do not specify a `REGISTRY_HOST`, the command uses Docker's public
 registry located at `registry-1.docker.io` by default. 
 
 # EXAMPLES
 
-### Pull an image from Docker Hub
+### Pull an image from Docker Hub/从Docker Hub中拉取镜像
 
 To download a particular image, or set of images (i.e., a repository), use
-`docker image pull`. If no tag is provided, Docker Engine uses the `:latest` tag as a
-default. This command pulls the `debian:latest` image:
+`docker image pull`. **If no tag is provided, Docker Engine uses the `:latest` tag as a
+default.** This command pulls the `debian:latest` image:
 
     $ docker image pull debian
 
@@ -23,10 +26,12 @@ default. This command pulls the `debian:latest` image:
     Digest: sha256:e7d38b3517548a1c71e41bffe9c8ae6d6d29546ce46bf62159837aad072c90aa
     Status: Downloaded newer image for debian:latest
 
-Docker images can consist of multiple layers. In the example above, the image
+**Docker images can consist of multiple layers.** In the example above, the image
 consists of two layers; `fdd5d7827f33` and `a3ed95caeb02`.
 
-Layers can be reused by images. For example, the `debian:jessie` image shares
+Docker镜像可以包含多个图层。
+
+**Layers can be reused by images.** For example, the `debian:jessie` image shares
 both layers with `debian:latest`. Pulling the `debian:jessie` image therefore
 only pulls its metadata, but not its layers, because all layers are already
 present locally:
@@ -48,16 +53,20 @@ command:
     debian       jessie   f50f9524513f    5 days ago   125.1 MB
     debian       latest   f50f9524513f    5 days ago   125.1 MB
 
-Docker uses a content-addressable image store, and the image ID is a SHA256
-digest covering the image's configuration and layers. In the example above,
+**Docker uses a content-addressable image store, and the image ID is a SHA256
+digest covering the image's configuration and layers.** In the example above,
 `debian:jessie` and `debian:latest` have the same image ID because they are
 actually the *same* image tagged with different names. Because they are the
 same image, their layers are stored only once and do not consume extra disk
 space.
 
+**Docker使用内容可寻址的镜像存储**，镜像ID是SHA256摘要，覆盖镜像的配置和图层。
+
 For more information about images, layers, and the content-addressable store,
 refer to [about storage drivers](https://docs.docker.com/storage/storagedriver/)
 in the online documentation.
+
+有关镜像，图层和内容可寻址存储的更多信息。
 
 
 ## Pull an image by digest (immutable identifier)
@@ -94,6 +103,9 @@ above, the digest of the image is:
 
 Docker also prints the digest of an image when *pushing* to a registry. This
 may be useful if you want to pin to a version of the image you just pushed.
+
+Docker还会在推送到镜像存档仓库时打印镜像的摘要。
+如果要固定到刚刚推送的镜像版本，这可能很有用。
 
 A digest takes the place of the tag when pulling an image, for example, to 
 pull the above image by digest, run the following command:
@@ -187,3 +199,4 @@ running in a terminal, will terminate the pull operation.
 > connection between the Docker Engine daemon and the Docker Engine client
 > initiating the pull is lost. If the connection with the Engine daemon is
 > lost for other reasons than a manual interaction, the pull is also aborted.
+> 当Docker引擎的守护进程和初始化拉取的客户端之间的连接丢失时，引擎会终止拉取操作。
