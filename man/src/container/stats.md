@@ -1,4 +1,7 @@
-Display a live stream of one or more containers' resource usage statistics
+
+**Display a live stream of one or more containers' resource usage statistics.**
+
+**显示一个或多个容器的资源使用情况统计信息的实时流。**
 
 # Format
 
