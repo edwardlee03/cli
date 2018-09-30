@@ -1,6 +1,9 @@
-Export the contents of a container's filesystem using the full or shortened
+
+**Export the contents of a container's filesystem** using the full or shortened
 container ID or container name. The output is exported to STDOUT and can be
 redirected to a tar file.
+
+使用完整或缩短的容器ID或容器名称**导出容器文件系统的内容。**
 
 Stream to a file instead of STDOUT by using **-o**.
 
