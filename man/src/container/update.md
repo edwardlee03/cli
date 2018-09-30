@@ -1,8 +1,12 @@
-The **docker container update** command dynamically updates container configuration.
-You can use this command to prevent containers from consuming too many 
-resources from their Docker host.  With a single command, you can place 
+
+The **docker container update** command **dynamically updates container configuration.**
+You can use this command to `prevent containers from consuming too many
+resources from their Docker host`.  With a single command, you can place
 limits on a single container or on many. To specify more than one container,
 provide space-separated list of container names or IDs.
+
+**动态更新容器的配置。**
+您可以使用此命令来防止容器从其Docker主机中消耗过多资源。
 
 With the exception of the **--kernel-memory** option, you can specify these
 options on a running or a stopped container. On kernel version older than
@@ -13,7 +17,9 @@ a running container with kernel memory initialized.
 
 ## kernel-memory
 
-Kernel memory limit (format: `<number>[<unit>]`, where unit = b, k, m or g)
+**Kernel memory limit** (format: `<number>[<unit>]`, where unit = b, k, m or g)
+
+内核内存限制
 
 Note that on kernel version older than 4.6, you can not update kernel memory on
 a running container if the container is started without kernel memory initialized,
@@ -22,13 +28,17 @@ effect when the container is started.
 
 ## memory
 
-Memory limit (format: <number><optional unit>, where unit = b, k, m or g)
+**Memory limit** (format: <number><optional unit>, where unit = b, k, m or g)
 
-Note that the memory should be smaller than the already set swap memory limit.
+内存限制
+
+`Note that the memory should be smaller than the already set swap memory limit.`
 If you want update a memory limit bigger than the already set swap memory limit,
 you should update swap memory limit at the same time. If you don't set swap memory 
 limit on docker create/run but only memory limit, the swap memory is double
 the memory limit.
+
+请注意，内存应小于已设置的交换内存限制。
 
 # EXAMPLES
 
@@ -52,7 +62,7 @@ To update multiple resource configurations for multiple containers:
 $ docker container update --cpu-shares 512 -m 300M abebf7571666 hopeful_morse
 ```
 
-### Update a container's kernel memory constraints
+### Update a container's kernel memory constraints/更新容器的内核内存限制
 
 You can update a container's kernel memory limit using the **--kernel-memory**
 option. On kernel version older than 4.6, this option can be updated on a
@@ -85,7 +95,7 @@ start it, the container uses the new value.
 Kernel version newer than (include) 4.6 does not have this limitation, you
 can use `--kernel-memory` the same way as other options.
 
-### Update a container's restart policy
+### Update a container's restart policy/更新容器的重启策略
 
 You can change a container's restart policy on a running container. The new
 restart policy takes effect instantly after you run `docker container update` on a
