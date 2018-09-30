@@ -1,4 +1,7 @@
-Block until a container stops, then print its exit code.
+
+**Block until a container stops, then print its exit code.**
+
+**阻塞直到容器停止，然后打印其退出代码。**
 
 # EXAMPLES
 
