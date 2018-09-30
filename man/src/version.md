@@ -1,5 +1,8 @@
-This command displays version information for both the Docker client and 
-daemon. 
+
+This command **displays version information for both the Docker client and
+daemon.**
+
+**显示Docker客户端和守护进程的版本信息。**
 
 # EXAMPLES
 
@@ -8,14 +11,18 @@ daemon.
 The default output:
 
     $ docker version
+    // 客户端
 	Client:
 	 Version:      1.8.0
+	 // API版本
 	 API version:  1.20
+	 // Go版本
 	 Go version:   go1.4.2
 	 Git commit:   f5bae0a
 	 Built:        Tue Jun 23 17:56:00 UTC 2015
 	 OS/Arch:      linux/amd64
 
+	// 服务端
 	Server:
 	 Version:      1.8.0
 	 API version:  1.20
