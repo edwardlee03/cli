@@ -1,3 +1,4 @@
+
 Log out of a Docker Registry located on the specified `SERVER`. You can
 specify a URL or a `hostname` for the `SERVER` value. If you do not specify a
 `SERVER`, the command attempts to log you out of Docker's public registry

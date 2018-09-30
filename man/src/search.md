@@ -1,8 +1,11 @@
-Search Docker Hub for images that match the specified `TERM`. The table
+
+**Search Docker Hub for images** that match the specified `TERM`. The table
 of images returned displays the name, description (truncated by default), number
 of stars awarded, whether the image is official, and whether it is automated.
 
-*Note* - Search queries will only return up to 25 results
+**在Docker Hub中搜索与指定的`TERM`匹配的镜像。**
+
+*Note* - Search queries will only return up to 25 results/搜索查询最多只能返回25个结果
 
 ## Filter
 
@@ -13,7 +16,7 @@ of stars awarded, whether the image is official, and whether it is automated.
 
 # EXAMPLES
 
-## Search Docker Hub for ranked images
+## Search Docker Hub for ranked images/搜索Docker Hub以获取排名的镜像
 
 Search a registry for the term 'fedora' and only display those images
 ranked 3 or higher:
