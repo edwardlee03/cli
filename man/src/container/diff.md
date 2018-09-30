@@ -1,11 +1,14 @@
-List the changed files and directories in a container᾿s filesystem since the
-container was created. Three different types of change are tracked:
+
+**List the changed files and directories in a container᾿s filesystem since the
+container was created.** Three different types of change are tracked:
 
 | Symbol | Description                     |
 |--------|---------------------------------|
 | `A`    | A file or directory was added   |
 | `D`    | A file or directory was deleted |
 | `C`    | A file or directory was changed |
+
+**自容器创建以来，列出容器文件系统中已更改的文件和目录。**
 
 You can use the full or shortened container ID or the container name set using
 **docker run --name** option.
