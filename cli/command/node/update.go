@@ -22,7 +22,7 @@ func newUpdateCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "update [OPTIONS] NODE",
-		Short: "Update a node",
+		Short: "Update a node/更新节点",
 		Args:  cli.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			return runUpdate(dockerCli, cmd.Flags(), args[0])

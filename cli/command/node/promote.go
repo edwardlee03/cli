@@ -12,7 +12,7 @@ import (
 func newPromoteCommand(dockerCli command.Cli) *cobra.Command {
 	return &cobra.Command{
 		Use:   "promote NODE [NODE...]",
-		Short: "Promote one or more nodes to manager in the swarm",
+		Short: "Promote one or more nodes to manager in the swarm/将一个或多个节点提升为swarm中的管理器",
 		Args:  cli.RequiresMinArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			return runPromote(dockerCli, args)

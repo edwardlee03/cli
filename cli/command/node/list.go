@@ -25,7 +25,7 @@ func newListCommand(dockerCli command.Cli) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:     "ls [OPTIONS]",
 		Aliases: []string{"list"},
-		Short:   "List nodes in the swarm",
+		Short:   "List nodes in the swarm/列出swarm中的节点",
 		Args:    cli.NoArgs,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			return runList(dockerCli, options)

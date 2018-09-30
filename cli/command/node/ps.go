@@ -29,7 +29,7 @@ func newPsCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "ps [OPTIONS] [NODE...]",
-		Short: "List tasks running on one or more nodes, defaults to current node",
+		Short: "List tasks running on one or more nodes, defaults to current node/列出在一个或多个节点上运行的任务，默认为当前节点",
 		Args:  cli.RequiresMinArgs(0),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			options.nodeIDs = []string{"self"}

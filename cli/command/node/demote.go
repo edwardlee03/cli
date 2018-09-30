@@ -12,7 +12,7 @@ import (
 func newDemoteCommand(dockerCli command.Cli) *cobra.Command {
 	return &cobra.Command{
 		Use:   "demote NODE [NODE...]",
-		Short: "Demote one or more nodes from manager in the swarm",
+		Short: "Demote one or more nodes from manager in the swarm/从swarm中的管理器降级一个或多个节点",
 		Args:  cli.RequiresMinArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			return runDemote(dockerCli, args)

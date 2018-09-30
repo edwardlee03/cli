@@ -22,7 +22,7 @@ func newInspectCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "inspect [OPTIONS] self|NODE [NODE...]",
-		Short: "Display detailed information on one or more nodes",
+		Short: "Display detailed information on one or more nodes/显示一个或多个节点的详细信息",
 		Args:  cli.RequiresMinArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.nodeIds = args
