@@ -22,7 +22,7 @@ func NewRenameCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "rename CONTAINER NEW_NAME",
-		Short: "Rename a container",
+		Short: "Rename a container/重命名容器",
 		Args:  cli.ExactArgs(2),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.oldName = args[0]

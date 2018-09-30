@@ -23,7 +23,7 @@ func NewTopCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "top CONTAINER [ps OPTIONS]",
-		Short: "Display the running processes of a container",
+		Short: "Display the running processes of a container/显示容器中正在运行的进程",
 		Args:  cli.RequiresMinArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.container = args[0]

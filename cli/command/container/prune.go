@@ -22,7 +22,7 @@ func NewPruneCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "prune [OPTIONS]",
-		Short: "Remove all stopped containers",
+		Short: "Remove all stopped containers/删除所有已停止的容器",
 		Args:  cli.NoArgs,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			spaceReclaimed, output, err := runPrune(dockerCli, options)

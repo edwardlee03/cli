@@ -30,7 +30,7 @@ func NewPsCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "ps [OPTIONS]",
-		Short: "List containers",
+		Short: "List containers/列出所有容器",
 		Args:  cli.NoArgs,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			return runPs(dockerCli, &options)

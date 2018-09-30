@@ -25,7 +25,7 @@ func NewRestartCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "restart [OPTIONS] CONTAINER [CONTAINER...]",
-		Short: "Restart one or more containers",
+		Short: "Restart one or more containers/重启一个或多个容器",
 		Args:  cli.RequiresMinArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.containers = args

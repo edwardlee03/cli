@@ -32,7 +32,7 @@ func NewStartCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "start [OPTIONS] CONTAINER [CONTAINER...]",
-		Short: "Start one or more stopped containers",
+		Short: "Start one or more stopped containers/启动一个或多个已停止的容器",
 		Args:  cli.RequiresMinArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.containers = args

@@ -32,7 +32,7 @@ func NewStatsCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "stats [OPTIONS] [CONTAINER...]",
-		Short: "Display a live stream of container(s) resource usage statistics",
+		Short: "Display a live stream of container(s) resource usage statistics/显示容器资源使用情况统计信息的实时流",
 		Args:  cli.RequiresMinArgs(0),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.containers = args

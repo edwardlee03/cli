@@ -40,7 +40,7 @@ func NewUpdateCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "update [OPTIONS] CONTAINER [CONTAINER...]",
-		Short: "Update configuration of one or more containers",
+		Short: "Update configuration of one or more containers/更新一个或多个容器的配置",
 		Args:  cli.RequiresMinArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			options.containers = args

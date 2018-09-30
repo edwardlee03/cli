@@ -21,7 +21,7 @@ func newInspectCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "inspect [OPTIONS] CONTAINER [CONTAINER...]",
-		Short: "Display detailed information on one or more containers",
+		Short: "Display detailed information on one or more containers/显示一个或多个容器的详细信息",
 		Args:  cli.RequiresMinArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.refs = args
