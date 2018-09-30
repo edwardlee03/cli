@@ -28,7 +28,7 @@ func NewImportCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "import [OPTIONS] file|URL|- [REPOSITORY[:TAG]]",
-		Short: "Import the contents from a tarball to create a filesystem image",
+		Short: "Import the contents from a tarball to create a filesystem image/从tar存档导入内容以创建文件系统镜像",
 		Args:  cli.RequiresMinArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			options.source = args[0]

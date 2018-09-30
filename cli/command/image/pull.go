@@ -27,7 +27,7 @@ func NewPullCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "pull [OPTIONS] NAME[:TAG|@DIGEST]",
-		Short: "Pull an image or a repository from a registry",
+		Short: "Pull an image or a repository from a registry/从镜像分发注册中心拉取镜像或仓库",
 		Args:  cli.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.remote = args[0]

@@ -23,7 +23,7 @@ func NewLoadCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "load [OPTIONS]",
-		Short: "Load an image from a tar archive or STDIN",
+		Short: "Load an image from a tar archive or STDIN/从tar存档或标准输入加载镜像",
 		Args:  cli.NoArgs,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			return runLoad(dockerCli, opts)

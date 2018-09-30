@@ -24,7 +24,7 @@ func NewHistoryCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "history [OPTIONS] IMAGE",
-		Short: "Show the history of an image",
+		Short: "Show the history of an image/显示镜像的历史记录",
 		Args:  cli.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.image = args[0]

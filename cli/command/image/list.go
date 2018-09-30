@@ -28,7 +28,7 @@ func NewImagesCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "images [OPTIONS] [REPOSITORY[:TAG]]",
-		Short: "List images",
+		Short: "List images/列出图像",
 		Args:  cli.RequiresMaxArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) > 0 {

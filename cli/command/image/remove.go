@@ -24,7 +24,7 @@ func NewRemoveCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "rmi [OPTIONS] IMAGE [IMAGE...]",
-		Short: "Remove one or more images",
+		Short: "Remove one or more images/删除一个或多个镜像",
 		Args:  cli.RequiresMinArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			return runRemove(dockerCli, opts, args)

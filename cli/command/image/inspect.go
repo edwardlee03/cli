@@ -20,7 +20,7 @@ func newInspectCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "inspect [OPTIONS] IMAGE [IMAGE...]",
-		Short: "Display detailed information on one or more images",
+		Short: "Display detailed information on one or more images/显示一个或多个镜像的详细信息",
 		Args:  cli.RequiresMinArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.refs = args
