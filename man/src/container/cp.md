@@ -1,12 +1,15 @@
-The `docker container cp` utility copies the contents of `SRC_PATH` to the `DEST_PATH`.
-You can copy from the container's file system to the local machine or the
-reverse, from the local filesystem to the container. If `-` is specified for
+
+The `docker container cp` utility **copies the contents of `SRC_PATH` to the `DEST_PATH`.**
+You can **copy from the container's file system to the local machine** or the
+reverse, **from the local filesystem to the container.** If `-` is specified for
 either the `SRC_PATH` or `DEST_PATH`, you can also stream a tar archive from
 `STDIN` or to `STDOUT`. The `CONTAINER` can be a running or stopped container.
 The `SRC_PATH` or `DEST_PATH` can be a file or directory.
 
-The `docker container cp` command assumes container paths are relative to the container's 
-`/` (root) directory. This means supplying the initial forward slash is optional; 
+**将`SRC_PATH`的内容复制到`DEST_PATH`。**
+
+The `docker container cp` command assumes **container paths are relative to the container's
+`/` (root) directory.** This means supplying the initial forward slash is optional;
 The command sees `compassionate_darwin:/tmp/foo/myfile.txt` and
 `compassionate_darwin:tmp/foo/myfile.txt` as identical. Local machine paths can
 be an absolute or relative value. The command interprets a local machine's
