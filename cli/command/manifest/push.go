@@ -48,7 +48,7 @@ func newPushListCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "push [OPTIONS] MANIFEST_LIST",
-		Short: "Push a manifest list to a repository",
+		Short: "Push a manifest list to a repository/将清单列表推送到仓库",
 		Args:  cli.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.target = args[0]

@@ -26,7 +26,7 @@ func newAnnotateCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "annotate [OPTIONS] MANIFEST_LIST MANIFEST",
-		Short: "Add additional information to a local image manifest",
+		Short: "Add additional information to a local image manifest/将其他信息添加到本地镜像清单",
 		Args:  cli.ExactArgs(2),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			opts.target = args[0]

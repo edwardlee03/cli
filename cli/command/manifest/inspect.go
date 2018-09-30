@@ -29,7 +29,7 @@ func newInspectCommand(dockerCli command.Cli) *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "inspect [OPTIONS] [MANIFEST_LIST] MANIFEST",
-		Short: "Display an image manifest, or manifest list",
+		Short: "Display an image manifest, or manifest list/显示镜像清单或清单列表",
 		Args:  cli.RequiresRangeArgs(1, 2),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			switch len(args) {
