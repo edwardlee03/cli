@@ -1,7 +1,10 @@
-List the containers in the local repository. By default this shows only
-the running containers.
 
-## Filters
+**List the containers in the local repository.** By default this shows only
+the `running containers`.
+
+**列出本地仓库中的所有容器。**默认情况下，仅显示正在运行的容器。
+
+## Filters/过滤条件
 
 Filter output based on these conditions:
    - ancestor=(<image-name>[:tag]|<image-id>|<image@digest>)
@@ -42,7 +45,7 @@ Valid placeholders for the Go template are listed below:
    - .Mounts       - Names of the volumes mounted in this container.
    - .Networks     - Names of the networks attached to this container.
 
-# EXAMPLES
+# EXAMPLES/示例
 
 ## Display all containers, including non-running
 
